@@ -1,19 +1,24 @@
-type CategoryListProps = {
+import {useState} from "react";
+
+type CategoryListMenuProps = {
     categories: {
         link: string
         dropdown?: string[]
     }[]
 }
 
-function CategoryList({categories}: CategoryListProps) {
+function CategoryListMenu({categories}: CategoryListMenuProps) {
+    const [openCategoryList, setOpenCategoryList] = useState(false);
 
     return (
         <>
             <a
-                className="btn d-flex align-items-center justify-content-between bg-primary w-100"
+                className={`btn d-flex align-items-center justify-content-between bg-primary w-100 ${openCategoryList ? "" : "collapsed"}`}
                 data-toggle="collapse"
-                href="/"
+                // href='/'
+                aria-expanded={openCategoryList}
                 style={{height: 65, padding: "0 30px"}}
+                onClick={() => setOpenCategoryList(!openCategoryList)}
             >
                 <h6 className="text-dark m-0">
                     <i className="fa fa-bars mr-2"/>
@@ -22,7 +27,7 @@ function CategoryList({categories}: CategoryListProps) {
                 <i className="fa fa-angle-down text-dark"/>
             </a>
             <nav
-                className="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light"
+                className={`collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light ${openCategoryList ? "show" : "collapsing"}`}
                 id="navbar-vertical"
                 style={{width: "calc(100% - 30px)", zIndex: 999}}
             >
@@ -60,4 +65,4 @@ function CategoryList({categories}: CategoryListProps) {
     );
 }
 
-export default CategoryList;
+export default CategoryListMenu;

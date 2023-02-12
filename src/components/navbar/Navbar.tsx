@@ -1,7 +1,7 @@
 import NavbarIcon from "../navbar-icon/NavbarIcon";
 import NavbarLinks from "../navbar-links/NavbarLinks";
 import MultyShopIcon from "../multy-shop-icon/MultyShopIcon";
-import CategoryList from "../category-list/CategoryList";
+import CategoryListMenu from "../category-list-menu/CategoryListMenu";
 
 const navbarLinks = [
     {
@@ -63,7 +63,7 @@ function Navbar() {
             <div className="container-fluid bg-dark mb-30">
                 <div className="row px-xl-5">
                     <div className="col-lg-3 d-none d-lg-block">
-                        <CategoryList categories={categoryList}/>
+                        <CategoryListMenu categories={categoryList}/>
                     </div>
                     <div className="col-lg-9">
                         <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
