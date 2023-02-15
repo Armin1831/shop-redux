@@ -9,7 +9,6 @@ export type TopbarButtonProps = {
 
 function TopbarButton({buttonName, dropdownNames, className}: TopbarButtonProps) {
     const [openDropdown, setOpenDropdown] = useState(false);
-    const [buttonNameState, setButtonNameState] = useState(buttonName);
 
     return (
         <OutsideHandler closeDropdown={setOpenDropdown}>
@@ -20,7 +19,7 @@ function TopbarButton({buttonName, dropdownNames, className}: TopbarButtonProps)
                     data-toggle="dropdown"
                     onClick={() => setOpenDropdown(!openDropdown)}
                 >
-                    {buttonNameState}
+                    {buttonName}
                 </button>
                 <div
                     className={`dropdown-menu dropdown-menu-right ${openDropdown ? "show" : ""}`}
@@ -28,7 +27,6 @@ function TopbarButton({buttonName, dropdownNames, className}: TopbarButtonProps)
                     {dropdownNames.map((dropdownName, index) => (
                         <button
                             className="dropdown-item" type="button" key={index}
-                            onClick={() => setButtonNameState(dropdownName)}
                         >
                             {dropdownName}
                         </button>

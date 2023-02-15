@@ -4,7 +4,7 @@ import React from "react";
 import IndexCarousel from "../../components/index-carousel/IndexCarousel";
 import OfferCart from "../../components/offer-cart/OfferCart";
 import FeaturedList from "../../components/featured-list/FeaturedList";
-import HomeCardList from "../../components/home-card-list/HomeCardList";
+import CardList from "../../components/card-list/CardList";
 import CategoryCard from "../../components/category-card/CategoryCard";
 import ProductCard from "../../components/product-card/ProductCard";
 
@@ -32,10 +32,10 @@ function Home() {
                 <FeaturedList features={featuredList}/>
             </div>
             <div className="container-fluid pt-5">
-                <HomeCardList type="category" title="Categories" Card={CategoryCard} cardList={categoryList}/>
+                <CardList type="category" title="Categories" Card={CategoryCard} cardList={categoryList}/>
             </div>
             <div className="container-fluid pt-5">
-                <HomeCardList type="product" title="Featured Products" Card={ProductCard} cardList={productList}/>
+                <CardList type="product" title="Featured Products" Card={ProductCard} cardList={productList}/>
             </div>
             <div className="container-fluid pt-5 pb-3">
                 <div className="row px-xl-5">
@@ -48,7 +48,7 @@ function Home() {
                 </div>
             </div>
             <div className="container-fluid pt-5">
-                <HomeCardList type="product" title="Recent Products" Card={ProductCard} cardList={productList}/>
+                <CardList type="product" title="Recent Products" Card={ProductCard} cardList={productList}/>
             </div>
             <div className="container-fluid py-5">
                 <div className="row px-xl-5">
