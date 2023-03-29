@@ -23,8 +23,8 @@ function Home() {
                         <IndexCarousel/>
                     </div>
                     <div className="col-lg-4">
-                        <OfferCart imgSrc="../assets/img/offer-1.jpg"height={200} offerCount={25} offerSpecial="Special Offer"/>
-                        <OfferCart imgSrc="/../assets/img/offer-2.jpg"height={200} offerCount={20} offerSpecial="Special Offer"/>
+                        <OfferCart imgSrc="../assets/img/offer-1.jpg" height={200} offerCount={25} offerSpecial="Special Offer"/>
+                        <OfferCart imgSrc="/../assets/img/offer-2.jpg" height={200} offerCount={20} offerSpecial="Special Offer"/>
                     </div>
                 </div>
             </div>
@@ -40,10 +40,10 @@ function Home() {
             <div className="container-fluid pt-5 pb-3">
                 <div className="row px-xl-5">
                     <div className="col-md-6">
-                        <OfferCart imgSrc="../assets/img/offer-1.jpg"height={300} offerCount={20} offerSpecial="Special Offer"/>
+                        <OfferCart imgSrc="../assets/img/offer-1.jpg" height={300} offerCount={20} offerSpecial="Special Offer"/>
                     </div>
                     <div className="col-md-6">
-                        <OfferCart imgSrc="../assets/img/offer-1.jpg"height={300} offerCount={20} offerSpecial="Special Offer"/>
+                        <OfferCart imgSrc="../assets/img/offer-1.jpg" height={300} offerCount={20} offerSpecial="Special Offer"/>
                     </div>
                 </div>
             </div>
