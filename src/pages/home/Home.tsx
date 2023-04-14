@@ -7,11 +7,11 @@ import FeaturedList from "../../components/featured-list/FeaturedList";
 import CardList from "../../components/card-list/CardList";
 import CategoryCard from "../../components/category-card/CategoryCard";
 import ProductCard from "../../components/product-card/ProductCard";
-
+import VendorCarousel from "../../components/vendor-carousel/VendorCarousel";
 
 // data
 import {categoryList, featuredList, productList} from "./homeData";
-import VendorCarousel from "../../components/vendor-carousel/VendorCarousel";
+
 
 
 function Home() {
@@ -57,7 +57,6 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <a href="#" className="btn btn-primary back-to-top"><i className="fa fa-angle-double-up"></i></a>
         </>
     );
 }

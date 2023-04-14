@@ -21,20 +21,18 @@ const ProductCarousel = () => {
                     <img className="w-100 h-100" src="../assets/img/product-4.jpg" alt="" />
                 </div>
             </div>
-            <a
+            <span
                 className="carousel-control-prev"
-                href="/product-carousel"
                 data-slide="prev"
             >
                 <i className="fa fa-2x fa-angle-left text-dark" />
-            </a>
-            <a
+            </span>
+            <span
                 className="carousel-control-next"
-                href="/product-carousel"
                 data-slide="next"
             >
                 <i className="fa fa-2x fa-angle-right text-dark" />
-            </a>
+            </span>
         </div>
     );
 };

@@ -1,65 +1,35 @@
 import React from 'react';
 
-const ProductOptions = () => {
+type ProductOptionsProps = {
+    optionName: string
+    inputName: string
+    items: {
+        label: string
+    }[]
+}
+
+const ProductOptions = ({optionName, inputName, items}: ProductOptionsProps) => {
     return (
         <div className="d-flex">
-            <strong className="text-dark mr-3">Sizes:</strong>
+            <strong className="text-dark mr-3">{optionName}:</strong>
             <form>
-                <div className="custom-control custom-radio custom-control-inline">
-                    <input
-                        type="radio"
-                        className="custom-control-input"
-                        id="size-1"
-                        name="size"
-                    />
-                    <label className="custom-control-label" htmlFor="size-1">
-                        XS
-                    </label>
-                </div>
-                <div className="custom-control custom-radio custom-control-inline">
-                    <input
-                        type="radio"
-                        className="custom-control-input"
-                        id="size-2"
-                        name="size"
-                    />
-                    <label className="custom-control-label" htmlFor="size-2">
-                        S
-                    </label>
-                </div>
-                <div className="custom-control custom-radio custom-control-inline">
-                    <input
-                        type="radio"
-                        className="custom-control-input"
-                        id="size-3"
-                        name="size"
-                    />
-                    <label className="custom-control-label" htmlFor="size-3">
-                        M
-                    </label>
-                </div>
-                <div className="custom-control custom-radio custom-control-inline">
-                    <input
-                        type="radio"
-                        className="custom-control-input"
-                        id="size-4"
-                        name="size"
-                    />
-                    <label className="custom-control-label" htmlFor="size-4">
-                        L
-                    </label>
-                </div>
-                <div className="custom-control custom-radio custom-control-inline">
-                    <input
-                        type="radio"
-                        className="custom-control-input"
-                        id="size-5"
-                        name="size"
-                    />
-                    <label className="custom-control-label" htmlFor="size-5">
-                        XL
-                    </label>
-                </div>
+                {
+                    items.map((item, index) => {
+                        return (
+                            <div className="custom-control custom-radio custom-control-inline">
+                                <input
+                                    type="radio"
+                                    className="custom-control-input"
+                                    id={`${inputName}-${index}`}
+                                    name={inputName}
+                                />
+                                <label className="custom-control-label" htmlFor={`${inputName}-${index}`}>
+                                    {item.label}
+                                </label>
+                            </div>
+                        )
+                    })
+                }
             </form>
         </div>
     )

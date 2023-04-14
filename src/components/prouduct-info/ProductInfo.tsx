@@ -5,6 +5,9 @@ import ReviewStars from "../review-stars/ReviewStars";
 import ProductOptions from "../product-options/ProductOptions";
 import ProductQuantityButton from "../product-quantity-button/ProductQuantityButton";
 
+// data
+import {colorOptions, sizeOptions} from "../../pages/product-detail/productDetailData"
+
 const ProductInfo = () => {
     return (
         <div className="h-100 bg-light p-30">
@@ -19,67 +22,10 @@ const ProductInfo = () => {
                 no sea Nonumy
             </p>
             <div className="mb-3">
-                <ProductOptions/>
+                <ProductOptions optionName="Sizes" inputName="size" items={sizeOptions}/>
             </div>
             <div className="d-flex mb-4">
-                <strong className="text-dark mr-3">Colors:</strong>
-                <form>
-                    <div className="custom-control custom-radio custom-control-inline">
-                        <input
-                            type="radio"
-                            className="custom-control-input"
-                            id="color-1"
-                            name="color"
-                        />
-                        <label className="custom-control-label" htmlFor="color-1">
-                            Black
-                        </label>
-                    </div>
-                    <div className="custom-control custom-radio custom-control-inline">
-                        <input
-                            type="radio"
-                            className="custom-control-input"
-                            id="color-2"
-                            name="color"
-                        />
-                        <label className="custom-control-label" htmlFor="color-2">
-                            White
-                        </label>
-                    </div>
-                    <div className="custom-control custom-radio custom-control-inline">
-                        <input
-                            type="radio"
-                            className="custom-control-input"
-                            id="color-3"
-                            name="color"
-                        />
-                        <label className="custom-control-label" htmlFor="color-3">
-                            Red
-                        </label>
-                    </div>
-                    <div className="custom-control custom-radio custom-control-inline">
-                        <input
-                            type="radio"
-                            className="custom-control-input"
-                            id="color-4"
-                            name="color"
-                        />
-                        <label className="custom-control-label" htmlFor="color-4">
-                            Blue
-                        </label>
-                    </div>
-                    <div className="custom-control custom-radio custom-control-inline">
-                        <input
-                            type="radio"
-                            className="custom-control-input"
-                            id="color-5"
-                            name="color"
-                        />
-                        <label className="custom-control-label" htmlFor="color-5">
-                            Green
-                        </label>
-                    </div>
-                </form>
+                <ProductOptions optionName="Colors" inputName="color" items={colorOptions}/>
             </div>
             <div className="d-flex align-items-center mb-4 pt-2">
                 <ProductQuantityButton/>
